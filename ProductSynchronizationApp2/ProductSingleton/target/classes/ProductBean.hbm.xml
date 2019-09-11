@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+<class name="com.google.dao.ProductBean" table="PRODUCT">
+
+<id name="productId" column="PID"></id>
+
+<property name="productName" column="PNAME"></property>
+
+<property name="productPrice" column="PRICE"></property>
+
+</class>
+
+</hibernate-mapping>
