@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+<class name="com.google.dao.Employee" table="EMPLOYEETPH" discriminator-value="EMP">
+
+<id name="empId" column="EMPID">
+<generator class="assigned">
+</generator>
+</id>
+
+<discriminator column="EMP_TYPE" type="java.lang.String"></discriminator>
+
+<property name="empName" column="EMPNAME"></property>
+
+<subclass name="com.google.dao.RegularEmployee" discriminator-value="Reg_Emp">
+<property name="salary" column="SALARY"></property>
+<property name="bonus" column="BONUS"></property>
+</subclass>
+
+<subclass name="com.google.dao.ContractEmployee" discriminator-value="Con_Emp">
+<property name="payPerHour" column="PAYPERHOUR"></property>
+<property name="contractPeriod" column="CONTRACTPERIOD"></property>
+</subclass>
+
+</class>
+
+</hibernate-mapping>
