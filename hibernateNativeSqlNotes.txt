@@ -1,17 +1,42 @@
-Native SQL is another technique of performing bulk operations on the data using hibernate
 
-By using Native SQL, we can perform both select, non-select operations on the data
-In face Native SQL means using the direct SQL command specific to the particular (current using) database and executing it with using hibernate
-Advantages and Disadvantages of Native SQL
-We can use the database specific keywords (commands), to get the data from the database
-While migrating a JDBC program into hibernate, the task becomes very simple because JDBC uses direct SQL commands and hibernate also supports the same commands by using this Native SQL
-The main draw back of Native SQL is, some times it makes the hibernate application as database dependent one
-If we want to execute Native SQL Queries on the database then, we need to construct an object of SQLQuery, actually this SQLQuery is an interface extended from Query and it is given in ” org.hibernate package ”
 
-In order to get an object of SQLQuery, we need to use a method createSQLQuery() given by session interface.
+Native SQL :is another technique of performing bulk operations on the data using hibernate
 
-While executing native sql queries on the database, we use directly tables, column names directly in our command.
+ 1.By using Native SQL, we can perform both select, non-select operations on the data
+2.In face Native SQL means using the direct SQL command specific to the particular (current using) database and executing it with using hibernate
+3.Advantages and Disadvantages of Native SQL :-
 
-Remember, while executing Native SQL Queries, even though we are selecting complete objects from teh database we need to type cast into object array only, not into our pojo class type, because we are giving direct table, column names in the Native SQL Querie so it does’nt know our class name
+ We can use the database specific keywords (commands), to get the data from the database
 
-If we execute the command, always first it will put’s data in ResultSet and from there List
+ While migrating a JDBC program into hibernate, the task becomes very simple because JDBC uses direct SQL commands and hibernate also supports the same commands by using this Native SQL
+
+ The main draw back of Native SQL is, some times it makes the hibernate application as database dependent one
+
+ If we want to execute Native SQL Queries on the database then, we need to construct an object of SQLQuery, actually this SQLQuery is an interface extended from Query and it is given in ” org.hibernate package ”
+
+ In order to get an object of SQLQuery, we need to use a method createSQLQuery() given by session interface.
+
+ While executing native sql queries on the database, we use directly tables, column names directly in our command.
+
+ Remember, while executing Native SQL Queries, even though we are selecting complete objects from teh database we need to type cast into object array only, not into our pojo class type, because we are giving direct table, column names in the Native SQL Querie so it does’nt know our class name
+
+ If we execute the command, always first it will put’s data in ResultSet and from there List.
+
+
+ 4.What is Pagination:-
+
+      The idea behind Pagination Hibernate is to divide the large result set into a number of pages and fetching one page at a time. 
+     We can programmatically declare how many records should contain each page and from what record. For example, the page may contain 5 records staring from 3rd record.
+    
+
+  5.why we use CriteriaAPI :-
+
+
+      In Hibernate, the Criteria API helps us build criteria query objects dynamically. 
+      Criteria is a another technique of data retrieval apart from HQL and native SQL queries. 
+      The primary advantage of the Criteria API is that it is intuitively designed to manipulate data without using any hard-coded SQL statements.
+
+          
+  
+
+ 
