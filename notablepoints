@@ -1,0 +1,7 @@
+Maven-Projects :
+
+mvn archetype:generate -DgroupId=com.program -DartifactId=Program -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+mvn archetype:generate -DgroupId=com.program -DartifactId=Program -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+mvn archetype:generate -DgroupId=com.google -DartifactId=JdbcTemplateUtilityMethods -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
